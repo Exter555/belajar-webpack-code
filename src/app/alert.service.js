@@ -1,20 +1,22 @@
-class AlertService {
-  constructor() {
-    this.error = document.querySelector('#error');
-  }
+import { cekInputValid } from './utils/cekInputValid.js'
 
-  tampilkanErrorPenjumlahan = (input, angka) => {
-    const hasil = input.reduce((pesan, nilai, index) => {
-      if (cekInputValid(angka[index])) {
-        return pesan + '';
-      } else {
-        return pesan + `${nilai} itu bukan angka! `;
-      }
-    }, 'Silahkan masukkan angka yang benar: ');
+export class AlertService {
+    constructor() {
+        this.error = document.querySelector('#error');
+    }
 
-    this.error.classList.remove('d-none');
-    this.error.innerText = hasil;
-  };
+    tampilkanErrorPenjumlahan = (input, angka) => {
+        const hasil = input.reduce((pesan, nilai, index) => {
+            if (cekInputValid(angka[index])) {
+                return pesan + '';
+            } else {
+                return pesan + `${nilai} itu bukan angka! `;
+            }
+        }, 'Silahkan masukkan angka yang benar: ');
 
-  sembunyikanError = () => this.error.classList.add('d-none');
+        this.error.classList.remove('d-none');
+        this.error.innerText = hasil;
+    };
+
+    sembunyikanError = () => this.error.classList.add('d-none');
 }
