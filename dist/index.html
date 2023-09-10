@@ -2,36 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Belajar Webpack</title>
-    <script defer="defer" src="242.3d2c9f663bbee67fb3a5.js"></script>
-    <script defer="defer" src="main.47357fd4fa65c000c0c8.js"></script>
-    <script defer="defer" src="vendor.e12b7276e1611e201e7e.js"></script>
-    <script defer="defer" src="hello.cbf3a599c7e2f8945588.js"></script>
-    <script defer="defer" src="shared.e4ed0aee85f8c79e6e21.js"></script>
-    <link href="main.32230b05b804bb92d660.css" rel="stylesheet" />
-  </head>
+  <script defer src="vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_vanilla-tilt_lib_vanilla-161c68.js"></script><script defer src="main.js"></script><script defer src="vendor.js"></script><script defer src="hello.js"></script><script defer src="shared.js"></script><link href="main.css" rel="stylesheet"></head>
+
   <body>
-    <img src="img/wpu-c413a253c037e6aef850.png" alt="" class="logo" data-tilt />
+    <img src="img/wpu.png" alt="" class="logo" data-tilt />
     <div class="row justify-content-center">
       <div class="col-4">
         <div class="card">
-          <div class="card-header text-center"><h3>WPU Super App 6.0</h3></div>
+          <div class="card-header text-center">
+            <h3>WPU Super App 6.0</h3>
+          </div>
           <div class="card-body">
             <div class="alert alert-danger" role="alert" id="error">error!</div>
             <h5 class="card-title">Kalkulator Sakti</h5>
             <div class="input-group mb-3">
-              <input class="form-control" placeholder="angka" id="operand1" autofocus required /> <span class="input-group-text">+</span>
-              <input class="form-control" placeholder="angka" id="operand2" required /> <button class="btn btn-primary" type="button" id="tombol-tambah">Jumlahkan!</button>
+              <input type="text" class="form-control" placeholder="angka" id="operand1" autofocus required />
+              <span class="input-group-text">+</span>
+              <input type="text" class="form-control" placeholder="angka" id="operand2" required />
+              <button class="btn btn-primary" type="button" id="tombol-tambah">Jumlahkan!</button>
             </div>
             <div class="card mt-3">
               <div class="card-body">Hasilnya adalah: <span id="hasil"></span></div>
             </div>
           </div>
-          <div class="card-footer text-center"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#jokesModal" id="jokes-receh">Jokes Receh!</button></div>
+          <div class="card-footer text-center">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#jokesModal" id="jokes-receh">Jokes Receh!</button>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Modal -->
     <div class="modal fade" id="jokesModal" tabindex="-1" aria-labelledby="jokesModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -40,7 +42,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">...</div>
-          <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
         </div>
       </div>
     </div>
