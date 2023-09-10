@@ -13,10 +13,9 @@ module.exports = merge(config, {
     port: 3000,
     liveReload: true,
   },
-  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].js',
     clean: true,
     assetModuleFilename: 'img/[name][ext]',
   },

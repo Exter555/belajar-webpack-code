@@ -2,6 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  entry: {
+    main: './src/index.js',
+    vendor: './src/vendor.js',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/template.html',
