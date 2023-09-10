@@ -3,8 +3,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js',
+    main: {
+      import: './src/index.js',
+      dependOn: 'shared',
+    },
     vendor: './src/vendor.js',
+    hello: {
+      import: './src/hello.js',
+      dependOn: 'shared',
+    },
+    shared: 'lodash',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
