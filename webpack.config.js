@@ -1,13 +1,12 @@
-const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'output'),
-    filename: 'bundle.js',
-  },
-  watch: true,
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+    }),
+  ],
   devtool: false,
   module: {
     rules: [
@@ -25,12 +24,20 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
+          // Compiles SASS TO CSS
           'sass-loader',
         ],
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.png$/i,
+        type: 'asset/resource',
       },
     ],
   },

@@ -1,5 +1,14 @@
-$bg: rgb(2, 83, 116);
+$bg: skyblue;
+$primary: skyblue;
+$danger: salmon;
 @import 'bootstrap/scss/bootstrap';
+
 body {
   background-color: $bg;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
 }
